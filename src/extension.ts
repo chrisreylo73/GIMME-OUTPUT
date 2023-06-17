@@ -12,23 +12,29 @@ export function activate(context: vscode.ExtensionContext) {
 		//Get the langauge of the file
 		const language = editor.document.languageId;
 		const text = editor.document.getText(editor.selection);
-		let wrappedText;
+		
 		if (!editor.selection.isEmpty) {
+			let wrappedText: string;
 			switch (language) {
 				case "java":
 					vscode.window.showInformationMessage(language);
-					wrappedText = `System.out.println(${text})`;
+					wrappedText = `System.out.println(${text});`;
 					break;
 				case "python":
 					wrappedText = `print(${text})`;
 					break;
 				case "javascript":
-					wrappedText = `console.log(${text})`;
+					wrappedText = `console.log(${text});`;
 					break;
 				default:
 					vscode.window.showInformationMessage(`Sorry Gimme Output does not support "${language}!"`);
 					break;
 			}
+			editor.edit(editBuilder => {
+				const selectedLineText = editor.document.lineAt(editor.selection.active.line).text;
+				const insertPosition = new vscode.Position(editor.selection.active.line, selectedLineText.length);
+				editBuilder.insert(insertPosition, `\n${wrappedText}`);
+			});
 		} else {
 			vscode.window.showInformationMessage(`Gimme Output: No Highlighted Selection!"`);
 		}
