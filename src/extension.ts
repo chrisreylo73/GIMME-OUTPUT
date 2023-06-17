@@ -11,23 +11,26 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 		//Get the langauge of the file
 		const language = editor.document.languageId;
+		const text = editor.document.getText(editor.selection);
+		let wrappedText;
 		if (!editor.selection.isEmpty) {
 			switch (language) {
 				case "java":
 					vscode.window.showInformationMessage(language);
+					wrappedText = `System.out.println(${text})`;
 					break;
 				case "python":
-					
+					wrappedText = `print(${text})`;
 					break;
 				case "javascript":
-					
+					wrappedText = `console.log(${text})`;
 					break;
 				default:
 					vscode.window.showInformationMessage(`Sorry Gimme Output does not support "${language}!"`);
 					break;
 			}
 		} else {
-			vscode.window.showInformationMessage(`No Highlighted Selection"`);
+			vscode.window.showInformationMessage(`Gimme Output: No Highlighted Selection!"`);
 		}
 	}));
 }
