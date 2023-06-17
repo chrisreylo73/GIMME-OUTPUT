@@ -18,3 +18,6 @@ This is a simple VS-Code extension that allows users to quickly wrap variables i
    Use Key Binding (ctrl + 3) for leading string print statement
    
    ![Alt text](image-2.png)
+
+## Language Compatibility
+   Java, Python and JavaScript
