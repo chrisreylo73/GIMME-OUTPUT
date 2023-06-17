@@ -29,7 +29,6 @@ export function activate(context: vscode.ExtensionContext) {
 		} else {
 			vscode.window.showInformationMessage(`No Highlighted Selection"`);
 		}
-		
 	}));
 }
 
