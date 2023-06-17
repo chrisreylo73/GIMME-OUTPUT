@@ -4,11 +4,17 @@
 This is a simple VS-Code extension that allows users to quickly wrap variables in print statements.
 
 ## How to Use 
-0. Highlight a variable in a file 
+1. Highlight a variable in a file 
 
-1. Open Command Pallet: (ctl + shift + p)
+   ![Alt text](images\image-1.png)
 
-2. Type in Code Sweep and select the command you want to happen
+2. 
+   Use Key Binding (ctrl + 1) for default print statement
 
+   ![Alt text](images\image-1.png)
 
-3. Watch it preform the action!
+   OR
+
+   Use Key Binding (ctrl + 3) for leading string print statement
+
+   ![Alt text](images\image-2.png)
