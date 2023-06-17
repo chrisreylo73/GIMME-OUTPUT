@@ -18,6 +18,12 @@
         "category": "Gimme Output",
         "title": "Generate Print Statement"
       }
+    ],
+    "keybindings":[
+      {
+        "command": "gimme-output.genPrint",
+        "key": "ctrl+1"
+      }
     ]
   },
   "scripts": {
