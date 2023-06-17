@@ -1,7 +1,7 @@
 {
   "name": "gimme-output",
   "displayName": "Gimme Output ",
-  "description": "Allows users to create print statments fast.",
+  "description": "Allows users to wrap variables in print statements fast.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.79.0"
@@ -14,15 +14,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "gimme-output.genPrint",
+        "command": "gimme-output.genPrint1",
         "category": "Gimme Output",
-        "title": "Generate Print Statement"
+        "title": "Generate Print Statement 1"
+      },
+      {
+        "command": "gimme-output.genPrint2",
+        "category": "Gimme Output",
+        "title": "Generate Print Statement 2"
       }
     ],
     "keybindings":[
       {
-        "command": "gimme-output.genPrint",
+        "command": "gimme-output.genPrint1",
         "key": "ctrl+1"
+      },
+      {
+        "command": "gimme-output.genPrint2",
+        "key": "ctrl+3"
       }
     ]
   },
