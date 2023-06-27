@@ -1,8 +1,11 @@
 {
   "name": "gimme-output",
   "displayName": "Gimme Output ",
+  "publisher": "chrisreylo",
   "description": "Allows users to wrap variables in print statements fast.",
   "version": "0.0.1",
+  "icon": "images/GOLOGO.png",
+  "repository": "https://github.com/chrisreylo73/Gimme-Output-VSC-EXT",
   "engines": {
     "vscode": "^1.79.0"
   },
